@@ -12,7 +12,17 @@ campoResultado.textContent = palavrasChave.join(", ")
 
 function processaTexto(texto){
     let palavras = texto.split(/\P{L}+/u);
+
+    cont frequencias = contaFrequencias(palaras);
+
+
     
+
+
+}
+
+function contaFrequencias(palavras){
+
     let frequencias = {};
 
     for(let i of palavras){
@@ -27,5 +37,7 @@ function processaTexto(texto){
 
 
     return palavras; 
+
+
 
 }
