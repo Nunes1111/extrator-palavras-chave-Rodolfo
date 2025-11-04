@@ -50,7 +50,7 @@ function tiraPalavrasRuins(palavras){
     const palavrasBoas = [];
 
     for (let palavra of palavras){
-        if (!PALAVRAS_RUINS.has(palavras) && palavra.length > 2) {
+        if (!PALAVRAS_RUINS.has(palavras) && palavra.length > 2){
             palavrasBoas.push(palavras);
         }
     }
