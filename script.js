@@ -15,8 +15,8 @@ function mostraPalavrasChave() {
 function processaTexto(texto) {
     let palavras = texto.split(/\P{L}+/u);
 
-    for (let i in palavras) {
-        palavras[i] = palavras[i].toLowercase()
+    for (let i in palavras){
+        palavras[i].toLowerCase()
     }
     palavras = tiraPalavrasRuins(palavras);
 
