@@ -7,16 +7,16 @@ botaoMostraPalavras.addEventListener("click", mostraPalavrasChave);
 function mostraPalavrasChave() {
     const texto = document.querySelector("#entrada-de-texto").value;
     const campoResultado = document.querySelector("#resultado-palavrachave");
-    const palavrasChave = processaTexto(texto);
+    const palavrasChaves = processaTexto(texto);
 
     campoResultado.textContent = palavrasChaves.join(", ")
 }
 
 function processaTexto(texto) {
-    let palavras = texto.split(/\P{L}+/u);
+    let palavras = texto.split(/\P{L}+/u)
 
     for (let i in palavras){
-        palavras[i].toLowerCase()
+        palavras[i].toLowerCase();
     }
     palavras = tiraPalavrasRuins(palavras);
 
@@ -48,13 +48,13 @@ function contaFrequencias(palavras) {
 }
 
 function tiraPalavrasRuins(palavras){
-
+    
     const palavrasBoas = [];
 
     for (let palavra of palavras){
-        if(!PALAVRAS_RUINS.has(palavra) && palavra.length > 2) {
+        if(!PALAVRAS_RUINS.has(palavra) && palavra.length > 2){
             palavrasBoas.push(palavra);
         }
-    }
+    } 
     return palavrasBoas;
 }
